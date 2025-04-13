@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+th,td {
+  border: 1px solid black;
+}
+table{
+  border-collapse: collapse;
+  width: 400px;
+  height: 280px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+button{
+  width: 100px;
+  background-color: rgb(199, 199, 234);
+}
