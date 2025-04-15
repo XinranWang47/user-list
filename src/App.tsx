@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import {data} from './data'
+import {data as rawData} from './data'
 
 interface User {
   id:number,
@@ -13,6 +13,11 @@ function App() {
   const [filter,setFilter] = useState<boolean>(false);
   const [sortKey,setSortKey] = useState<string>('Name');
   const [sortOrder,setSortOrder] = useState<string>('asc');
+  const [data, setData] = useState<User[]>([]);
+
+  useEffect(()=>{
+    setTimeout(()=>setData(rawData),500)
+  },[])
 
   function handleFilter(){
     setFilter(!filter)
